@@ -13,7 +13,7 @@ function copyOther(
   return Worker({
     command: 'rsync',
     args: [
-      '-r',
+      '-rL',
       ...(excludes
         ? excludes.reduce(
             (prev, curr) => [...prev, '--exclude', curr],
